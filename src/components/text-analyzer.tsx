@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { calculateStats } from "@/lib/utils";
+import { Progress } from "./ui/progress";
 
 const TextAnalyzer = () => {
   const [text, setText] = useState<string>("");
@@ -136,6 +137,7 @@ const TextAnalyzer = () => {
                 <span>
                   {count} ({percentage}%)
                 </span>
+                <Progress value={parseInt(percentage)} />
               </motion.div>
             ))}
           </AnimatePresence>
