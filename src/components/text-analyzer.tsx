@@ -4,6 +4,7 @@ import { useTheme } from "@/context/theme-provider";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const calculateStats = (text: string, includeSpaces: boolean) => {
   const charCount = includeSpaces
@@ -181,9 +182,14 @@ const TextAnalyzer = () => {
           >
             <Button
               onClick={() => setShowAllLetters(!showAllLetters)}
-              className="mt-2 text-blue-500 hover:underline"
+              variant="link"
             >
               {showAllLetters ? "Show Less" : "Show More"}
+              {showAllLetters ? (
+                <ChevronUp className="w-4 h-4 ml-3" />
+              ) : (
+                <ChevronDown className="w-4 h-4 ml-3" />
+              )}
             </Button>
           </motion.div>
         )}
