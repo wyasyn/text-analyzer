@@ -17,7 +17,7 @@ type TextProviderState = {
   charLimit: number;
   warning: string;
   showAllLetters: boolean;
-  textareaRef: HTMLTextAreaElement | null;
+  textareaRef: React.RefObject<HTMLTextAreaElement | null>;
   handleSetText: (text: string) => void;
   handleSetIncludeSpaces: () => void;
   handleUseCharLimit: () => void;
@@ -93,7 +93,7 @@ export const TextAnalyzerProvider = ({
       charLimit,
       warning,
       showAllLetters,
-      textareaRef: textareaRef.current,
+      textareaRef,
       handleSetText,
       handleSetIncludeSpaces,
       handleUseCharLimit,
