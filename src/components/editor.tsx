@@ -2,13 +2,15 @@ import { useText } from "@/context/text-analizer-provider";
 import { Textarea } from "./ui/textarea";
 import Checkboxes from "./Ckeckboxes";
 import { calculateStats } from "@/lib/utils";
+import ClearText from "./clear-text";
 
 export default function Editor() {
   const { text, textareaRef, handleSetText, includeSpaces, warning } =
     useText();
   const { readingTime } = calculateStats(text, includeSpaces);
   return (
-    <div>
+    <div className="relative">
+      <ClearText />
       {warning && <p className="text-destructive my-4">{warning}</p>}
       <Textarea
         ref={textareaRef}
