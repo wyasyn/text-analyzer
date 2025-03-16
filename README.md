@@ -59,7 +59,7 @@ The app should now be running at **`http://localhost:5173/`** 🚀
 
 ## 📜 License
 
-MIT License © [Your Name](https://github.com/your-username)
+MIT License © [Yasin Walum](https://github.com/wyasyn)
 
 ---
 
