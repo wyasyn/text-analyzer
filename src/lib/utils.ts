@@ -26,7 +26,7 @@ export const calculateStats = (text: string, includeSpaces: boolean) => {
     .map(([letter, count]) => ({
       letter,
       count,
-      percentage: ((count / charCount) * 100).toFixed(2),
+      percentage: ((count / charCount) * 100).toFixed(0),
     }));
 
   return {
